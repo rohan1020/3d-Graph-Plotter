@@ -7,3 +7,14 @@
 //
 
 #include "SceneStateData.h"
+
+SceneStateData::SceneStateData(){
+    
+    
+}
+
+SceneStateData::SceneStateData(const SceneStateData &p2){
+    
+    cubes = p2.cubes;
+    
+}

@@ -12,11 +12,18 @@
 
 Range::Range()
 {
-    x_min = -3.14*2 ;
-    x_max = 3.14*2 ;
+    x_min = -8 ;
+    x_max = 8 ;
     
-    y_min = -5 ;
-    y_max = 5 ;
+    y_min = -8 ;
+    y_max = 8 ;
+    
+    z_min = -5;
+    z_max = 5 ;
+    
+    pixelsPerPoint_X = 20; // Pixels - Constant Parameter
+    pixelsPerPoint_Y = 10; // Pixels - Constant Parameter
+    
     
     calculateCoordinateSystem();
     

@@ -28,10 +28,11 @@ public:
     
     float x_min, x_max ;
     float y_min, y_max ;
+    float z_min, z_max ;
     
     /* Scaling Params */
     
-    int pixelsPerPoint_X = 5; // Pixels - Constant Parameter
+    int pixelsPerPoint_X = 50; // Pixels - Constant Parameter
     int pixelsPerPoint_Y = 10; // Pixels - Constant Parameter
     
     int height = 600 ; // Pixels

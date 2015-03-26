@@ -6,21 +6,20 @@
 #include "RCube.h"
 #include <vector>;
 
+#include "includes/CanvasDataGenerator.h"
+
 using namespace std;
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
     
-    vector<RCube> cubes ;
-    cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(0,0,0)));
-    cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(2,0,0)));
-    cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(-2,0,0)));
-    cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(0,2,0)));
-    cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(0,-2,0)));
+    CanvasDataGenerator cdg;
+    
+    SceneStateData ssd = cdg.getSceneStateData();
     
 
-    GLView view(cubes);
+    GLView view(ssd.cubes);
     //view.setSceneData(cubes);
     //view.setWindowTitle(QObject::tr("Tetrahedron"));
     //view.resize(300, 300);

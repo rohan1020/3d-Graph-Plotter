@@ -16,6 +16,7 @@
 #include "Point.h"
 #include "CanvasStateData.h"
 #include "Line.h"
+#include "../SceneStateData.h"
 
 using namespace std;
 
@@ -35,11 +36,15 @@ public:
     
     CanvasStateData getCanvasStateData();
     
+    SceneStateData getSceneStateData();
+    
     CanvasDataGenerator(Range prange, MathFunction pmathFunc);
     
     CanvasStateData changeRange(Range prange);
     
     vector<Line> getPlotLines();
+    
+    vector<RCube> getPlotCubes();
     
     
    

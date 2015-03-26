@@ -41,3 +41,8 @@ float MathFunction::getYVal(float x)
 //    else
 //        return x*x*x;
 }
+
+float MathFunction::getYVal(float x, float y)
+{
+    return x*x/4 + y*y/8; // ToDo - Generalize
+}

@@ -31,6 +31,8 @@ public:
     
     float getYVal(float x);
     
+    float getYVal(float x, float y);
+    
 };
 
 

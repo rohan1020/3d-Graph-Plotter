@@ -66,5 +66,56 @@ vector<Line> CanvasDataGenerator::getPlotLines()
     
 }
 
+vector<RCube> CanvasDataGenerator::getPlotCubes()
+{
+    
+    vector<RCube> cubes ;
+    
+    vector<Point> points ;
+    
+    float curX = range.x_min , curY = range.y_min, curZ;
+    float stepSize = range.getStepSize();
+    
+    while (curX <= range.x_max) {
+        
+        curY = range.y_min ;
+        
+        while (curY <= range.y_max) {
+            
+            curZ = mathFunc.getYVal(curX, curY);
+            
+            cubes.push_back(* new RCube(*new QGLCube(0.1),*new QVector3D(curX,curY,curZ)));
+            
+            curY = curY + stepSize ;
+            
+        }
+        
+        curX = curX + stepSize ;
+        
+    }
+    
+    //
+//    
+//    // Todo - REmove DUMMY DATA
+//    
+//    //cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(0,0,0)));
+//    cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(2,0,0)));
+//    //cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(-2,0,0)));
+//    cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(0,2,0)));
+//    cubes.push_back(* new RCube(*new QGLCube(1),*new QVector3D(0,-2,0)));
+    
+    return cubes;
+    
+}
+
+SceneStateData CanvasDataGenerator::getSceneStateData()
+{
+    SceneStateData ssdata ;
+    
+    ssdata.cubes = getPlotCubes();
+    
+    return ssdata;
+}
+
 
 

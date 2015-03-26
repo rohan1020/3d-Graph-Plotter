@@ -10,5 +10,21 @@
 #define __graph3d__SceneStateData__
 
 #include <stdio.h>
+#include "RCube.h"
+#include <vector>
+
+using namespace std;
+
+class SceneStateData {
+    
+    
+public:
+    
+    vector<RCube> cubes;
+    
+    SceneStateData();
+    
+    SceneStateData(const SceneStateData &p2);
+};
 
 #endif /* defined(__graph3d__SceneStateData__) */
