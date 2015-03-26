@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>75D5B415-5A33-429F-A2E8-BBB3E56C50E7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>2dpaint</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BD0A601068B70E341A6AF8A4D69BB08B72198FB4</key>
+		<string>https://github.com/rohan1020/PTOpenSoft.git</string>
+		<key>D0F7CC2A9B712D1BD694FB9E86CCB9D5F0658B74</key>
+		<string>https://github.com/rsrihari/expparser</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>2dpaint.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BD0A601068B70E341A6AF8A4D69BB08B72198FB4</key>
+		<string>../..</string>
+		<key>D0F7CC2A9B712D1BD694FB9E86CCB9D5F0658B74</key>
+		<string>../../expparser</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rohan1020/PTOpenSoft.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BD0A601068B70E341A6AF8A4D69BB08B72198FB4</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BD0A601068B70E341A6AF8A4D69BB08B72198FB4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>2dpaint</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D0F7CC2A9B712D1BD694FB9E86CCB9D5F0658B74</string>
+			<key>IDESourceControlWCCName</key>
+			<string>expparser</string>
+		</dict>
+	</array>
+</dict>
+</plist>

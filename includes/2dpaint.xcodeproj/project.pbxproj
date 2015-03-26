@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02D60937BDA24E3ABB606E42 /* widget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = DB7AB3446C8E3EF440F42D80 /* widget.cpp */; settings = {ATTRIBUTES = (); }; };
+		15E2368BBD24ABD7FD42DDD6 /* Line.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 98E15315FCE6A7EEB93F9147 /* Line.cpp */; settings = {ATTRIBUTES = (); }; };
+		2780D8330A79C01E0D1123A2 /* MainCanvas.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 4FF6A20EEB069A289176DFAD /* MainCanvas.cpp */; settings = {ATTRIBUTES = (); }; };
+		2B093CA6F071B023A473CED0 /* main.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 118FCBAABA162BA17933C789 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		325F6FF378F6DD8CF807450C /* QtCore.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 4CCBAF4988F7A032A2009181 /* QtCore.framework */; };
+		3F367F18B7E41FA2B55F3C7A /* MathFunction.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = AEDAD6C0EE0F659248F39403 /* MathFunction.cpp */; settings = {ATTRIBUTES = (); }; };
+		40434D2D87215F96B5865B15 /* QtGui.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 016B0949A417F07816C9304A /* QtGui.framework */; };
+		4DC2A288150D92700B2067F2 /* Point.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 70A41B4349C803821012EE1E /* Point.cpp */; settings = {ATTRIBUTES = (); }; };
+		4E7F4BFDA0FA4525F80AC5E6 /* CanvasStateData.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = BC7723FF7F74713E4AFABBB7 /* CanvasStateData.cpp */; settings = {ATTRIBUTES = (); }; };
+		7569EE970450143D72B06EEF /* moc_CanvasState.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 670336822DD277656B65CD96 /* moc_CanvasState.cpp */; settings = {ATTRIBUTES = (); }; };
+		7651FF951AC19B9C003CDB19 /* constants.h.gch in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 7651FF851AC19B9C003CDB19 /* constants.h.gch */; };
+		7651FF961AC19B9C003CDB19 /* error.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7651FF861AC19B9C003CDB19 /* error.cpp */; };
+		7651FF971AC19B9C003CDB19 /* error.h.gch in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 7651FF881AC19B9C003CDB19 /* error.h.gch */; };
+		7651FF981AC19B9C003CDB19 /* functions.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7651FF891AC19B9C003CDB19 /* functions.cpp */; };
+		7651FF991AC19B9C003CDB19 /* functions.h.gch in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 7651FF8B1AC19B9C003CDB19 /* functions.h.gch */; };
+		7651FF9A1AC19B9C003CDB19 /* parser.cbp in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 7651FF8C1AC19B9C003CDB19 /* parser.cbp */; };
+		7651FF9B1AC19B9C003CDB19 /* parser.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7651FF8D1AC19B9C003CDB19 /* parser.cpp */; };
+		7651FF9C1AC19B9C003CDB19 /* parser.depend in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 7651FF8E1AC19B9C003CDB19 /* parser.depend */; };
+		7651FF9D1AC19B9C003CDB19 /* parser.h.gch in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 7651FF901AC19B9C003CDB19 /* parser.h.gch */; };
+		7651FF9E1AC19B9C003CDB19 /* parser.layout in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 7651FF911AC19B9C003CDB19 /* parser.layout */; };
+		7651FF9F1AC19B9C003CDB19 /* variablelist.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7651FF921AC19B9C003CDB19 /* variablelist.cpp */; };
+		7651FFA01AC19B9C003CDB19 /* variablelist.h.gch in Bundle Resources */ = {isa = PBXBuildFile; fileRef = 7651FF941AC19B9C003CDB19 /* variablelist.h.gch */; };
+		88D182C5FDB6821D590D37D8 /* FunctionInputWindow.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 13AB30BC7DEF53A80C90F35A /* FunctionInputWindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		A8726DBAB1708155C13A0A2A /* moc_window.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 03CC4BA1004C618C58FF0257 /* moc_window.cpp */; settings = {ATTRIBUTES = (); }; };
+		B168B36E7204882519ED70EC /* CanvasDataGenerator.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 1989362E5E61BBD6E769474F /* CanvasDataGenerator.cpp */; settings = {ATTRIBUTES = (); }; };
+		C306FF839A517BFCF6A3D6E2 /* CanvasText.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = F07AA9C46A96868C2B4D2CB5 /* CanvasText.cpp */; settings = {ATTRIBUTES = (); }; };
+		D2ACB67A4E2905FEA6F1B257 /* moc_FunctionInputWindow.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 2DF920268DAA14528A43B506 /* moc_FunctionInputWindow.cpp */; settings = {ATTRIBUTES = (); }; };
+		D608B689453607BD7A6BB690 /* Range.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 61B89A15ED0EBF77FCADD59A /* Range.cpp */; settings = {ATTRIBUTES = (); }; };
+		EE433C6E873A077601F75D8F /* moc_widget.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 6278B040C35C78324AB8F098 /* moc_widget.cpp */; settings = {ATTRIBUTES = (); }; };
+		F072E0280A6F926F8FDFF08B /* CanvasState.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 8FF8286F15F3B16FD447847F /* CanvasState.cpp */; settings = {ATTRIBUTES = (); }; };
+		FC203E8953C53F09233D0CFC /* window.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 22B8EB497DD4812281107EF2 /* window.cpp */; settings = {ATTRIBUTES = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0017A40F798267B14DC6F6A4 /* FunctionInputWindow.ui */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = FunctionInputWindow.ui; sourceTree = SOURCE_ROOT; };
+		016B0949A417F07816C9304A /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /usr/local/Cellar/qt/4.8.6/lib/QtGui.framework; sourceTree = "<absolute>"; };
+		03CC4BA1004C618C58FF0257 /* moc_window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_window.cpp; sourceTree = SOURCE_ROOT; };
+		118FCBAABA162BA17933C789 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		12E3A86526ADC2D89F4391B2 /* CoordinateSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoordinateSystem.h; sourceTree = SOURCE_ROOT; };
+		13AB30BC7DEF53A80C90F35A /* FunctionInputWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FunctionInputWindow.cpp; sourceTree = SOURCE_ROOT; };
+		15C6750C960D9F9A117E473E /* MainCanvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCanvas.h; sourceTree = SOURCE_ROOT; };
+		1989362E5E61BBD6E769474F /* CanvasDataGenerator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasDataGenerator.cpp; sourceTree = SOURCE_ROOT; };
+		22B8EB497DD4812281107EF2 /* window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = window.cpp; sourceTree = SOURCE_ROOT; };
+		2B601351BBFD3F9918188CF7 /* window.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = window.h; sourceTree = SOURCE_ROOT; };
+		2DF920268DAA14528A43B506 /* moc_FunctionInputWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_FunctionInputWindow.cpp; sourceTree = SOURCE_ROOT; };
+		2F9E04FFEF648961061AE299 /* Range.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Range.h; sourceTree = SOURCE_ROOT; };
+		419E48E5EB6977856DA44A1A /* MathFunction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathFunction.h; sourceTree = SOURCE_ROOT; };
+		49015FBE24F188C3EA973ECD /* widget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = widget.h; sourceTree = SOURCE_ROOT; };
+		4CCBAF4988F7A032A2009181 /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /usr/local/Cellar/qt/4.8.6/lib/QtCore.framework; sourceTree = "<absolute>"; };
+		4FF6A20EEB069A289176DFAD /* MainCanvas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainCanvas.cpp; sourceTree = SOURCE_ROOT; };
+		5191F00FA59CDD8135B64CA1 /* Point.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Point.h; sourceTree = SOURCE_ROOT; };
+		61B89A15ED0EBF77FCADD59A /* Range.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Range.cpp; sourceTree = SOURCE_ROOT; };
+		6278B040C35C78324AB8F098 /* moc_widget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_widget.cpp; sourceTree = SOURCE_ROOT; };
+		670336822DD277656B65CD96 /* moc_CanvasState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = moc_CanvasState.cpp; sourceTree = SOURCE_ROOT; };
+		68D0508E5CB2371BA31B95CA /* FunctionInputWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionInputWindow.h; sourceTree = SOURCE_ROOT; };
+		690E129D7C28C53E33B8880A /* CanvasText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasText.h; sourceTree = SOURCE_ROOT; };
+		6D3537862C7E6EC32804C0C2 /* CanvasState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasState.h; sourceTree = SOURCE_ROOT; };
+		70A41B4349C803821012EE1E /* Point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Point.cpp; sourceTree = SOURCE_ROOT; };
+		7651FF811AC1765E003CDB19 /* 2dpaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2dpaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7651FF841AC19B9C003CDB19 /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		7651FF851AC19B9C003CDB19 /* constants.h.gch */ = {isa = PBXFileReference; lastKnownFileType = file; path = constants.h.gch; sourceTree = "<group>"; };
+		7651FF861AC19B9C003CDB19 /* error.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = error.cpp; sourceTree = "<group>"; };
+		7651FF871AC19B9C003CDB19 /* error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = error.h; sourceTree = "<group>"; };
+		7651FF881AC19B9C003CDB19 /* error.h.gch */ = {isa = PBXFileReference; lastKnownFileType = file; path = error.h.gch; sourceTree = "<group>"; };
+		7651FF891AC19B9C003CDB19 /* functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = functions.cpp; sourceTree = "<group>"; };
+		7651FF8A1AC19B9C003CDB19 /* functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = functions.h; sourceTree = "<group>"; };
+		7651FF8B1AC19B9C003CDB19 /* functions.h.gch */ = {isa = PBXFileReference; lastKnownFileType = file; path = functions.h.gch; sourceTree = "<group>"; };
+		7651FF8C1AC19B9C003CDB19 /* parser.cbp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = parser.cbp; sourceTree = "<group>"; };
+		7651FF8D1AC19B9C003CDB19 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parser.cpp; sourceTree = "<group>"; };
+		7651FF8E1AC19B9C003CDB19 /* parser.depend */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parser.depend; sourceTree = "<group>"; };
+		7651FF8F1AC19B9C003CDB19 /* parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		7651FF901AC19B9C003CDB19 /* parser.h.gch */ = {isa = PBXFileReference; lastKnownFileType = file; path = parser.h.gch; sourceTree = "<group>"; };
+		7651FF911AC19B9C003CDB19 /* parser.layout */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = parser.layout; sourceTree = "<group>"; };
+		7651FF921AC19B9C003CDB19 /* variablelist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = variablelist.cpp; sourceTree = "<group>"; };
+		7651FF931AC19B9C003CDB19 /* variablelist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = variablelist.h; sourceTree = "<group>"; };
+		7651FF941AC19B9C003CDB19 /* variablelist.h.gch */ = {isa = PBXFileReference; lastKnownFileType = file; path = variablelist.h.gch; sourceTree = "<group>"; };
+		8FF8286F15F3B16FD447847F /* CanvasState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasState.cpp; sourceTree = SOURCE_ROOT; };
+		98E15315FCE6A7EEB93F9147 /* Line.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Line.cpp; sourceTree = SOURCE_ROOT; };
+		AEDAD6C0EE0F659248F39403 /* MathFunction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MathFunction.cpp; sourceTree = SOURCE_ROOT; };
+		B14ABB0AA7604546A3BDA130 /* 2dpaint.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = 2dpaint.pro; sourceTree = SOURCE_ROOT; };
+		B46B4F49ECCC64AB6499DED2 /* Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = SOURCE_ROOT; };
+		BB92E64D2F48B3AEFA48EEE4 /* ui_FunctionInputWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_FunctionInputWindow.h; sourceTree = SOURCE_ROOT; };
+		BC7723FF7F74713E4AFABBB7 /* CanvasStateData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasStateData.cpp; sourceTree = SOURCE_ROOT; };
+		DB7AB3446C8E3EF440F42D80 /* widget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = widget.cpp; sourceTree = SOURCE_ROOT; };
+		E9B3A0B86F28ECF23427DCD2 /* CanvasDataGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasDataGenerator.h; sourceTree = SOURCE_ROOT; };
+		F07AA9C46A96868C2B4D2CB5 /* CanvasText.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CanvasText.cpp; sourceTree = SOURCE_ROOT; };
+		F329BF28B02CF736451C4A32 /* CanvasStateData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasStateData.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A1043669E6E5A7426EA502A /* Frameworks & Libraries */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40434D2D87215F96B5865B15 /* QtGui.framework in Frameworks & Libraries */,
+				325F6FF378F6DD8CF807450C /* QtCore.framework in Frameworks & Libraries */,
+			);
+			name = "Frameworks & Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05596AB53D8D521C69802C27 /* 2dpaint */ = {
+			isa = PBXGroup;
+			children = (
+				7651FF831AC19B9C003CDB19 /* expparser */,
+				FB61758D0F0FDA4BA867C3D5 /* Sources */,
+				46E892BBB6BB6952967E0561 /* Temporary Sources */,
+				883D7615C4D2DE3FA1218F12 /* Headers */,
+				7CABE3C80E79AD2B307756D2 /* Sources [qmake] */,
+				EEC299C65D5017EB9DD513B0 /* Sources [UIC] */,
+				ED1E82605DD74B483AF3C982 /* External Frameworks and Libraries */,
+				7651FF821AC1765E003CDB19 /* Products */,
+			);
+			name = 2dpaint;
+			sourceTree = "<Group>";
+		};
+		46E892BBB6BB6952967E0561 /* Temporary Sources */ = {
+			isa = PBXGroup;
+			children = (
+				670336822DD277656B65CD96 /* moc_CanvasState.cpp */,
+				2DF920268DAA14528A43B506 /* moc_FunctionInputWindow.cpp */,
+				6278B040C35C78324AB8F098 /* moc_widget.cpp */,
+				03CC4BA1004C618C58FF0257 /* moc_window.cpp */,
+				BB92E64D2F48B3AEFA48EEE4 /* ui_FunctionInputWindow.h */,
+			);
+			name = "Temporary Sources";
+			sourceTree = "<Group>";
+		};
+		7651FF821AC1765E003CDB19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7651FF811AC1765E003CDB19 /* 2dpaint.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7651FF831AC19B9C003CDB19 /* expparser */ = {
+			isa = PBXGroup;
+			children = (
+				7651FF841AC19B9C003CDB19 /* constants.h */,
+				7651FF851AC19B9C003CDB19 /* constants.h.gch */,
+				7651FF861AC19B9C003CDB19 /* error.cpp */,
+				7651FF871AC19B9C003CDB19 /* error.h */,
+				7651FF881AC19B9C003CDB19 /* error.h.gch */,
+				7651FF891AC19B9C003CDB19 /* functions.cpp */,
+				7651FF8A1AC19B9C003CDB19 /* functions.h */,
+				7651FF8B1AC19B9C003CDB19 /* functions.h.gch */,
+				7651FF8C1AC19B9C003CDB19 /* parser.cbp */,
+				7651FF8D1AC19B9C003CDB19 /* parser.cpp */,
+				7651FF8E1AC19B9C003CDB19 /* parser.depend */,
+				7651FF8F1AC19B9C003CDB19 /* parser.h */,
+				7651FF901AC19B9C003CDB19 /* parser.h.gch */,
+				7651FF911AC19B9C003CDB19 /* parser.layout */,
+				7651FF921AC19B9C003CDB19 /* variablelist.cpp */,
+				7651FF931AC19B9C003CDB19 /* variablelist.h */,
+				7651FF941AC19B9C003CDB19 /* variablelist.h.gch */,
+			);
+			path = expparser;
+			sourceTree = SOURCE_ROOT;
+		};
+		7CABE3C80E79AD2B307756D2 /* Sources [qmake] */ = {
+			isa = PBXGroup;
+			children = (
+				B14ABB0AA7604546A3BDA130 /* 2dpaint.pro */,
+			);
+			name = "Sources [qmake]";
+			sourceTree = "<Group>";
+		};
+		883D7615C4D2DE3FA1218F12 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E9B3A0B86F28ECF23427DCD2 /* CanvasDataGenerator.h */,
+				6D3537862C7E6EC32804C0C2 /* CanvasState.h */,
+				F329BF28B02CF736451C4A32 /* CanvasStateData.h */,
+				690E129D7C28C53E33B8880A /* CanvasText.h */,
+				12E3A86526ADC2D89F4391B2 /* CoordinateSystem.h */,
+				68D0508E5CB2371BA31B95CA /* FunctionInputWindow.h */,
+				B46B4F49ECCC64AB6499DED2 /* Line.h */,
+				15C6750C960D9F9A117E473E /* MainCanvas.h */,
+				419E48E5EB6977856DA44A1A /* MathFunction.h */,
+				5191F00FA59CDD8135B64CA1 /* Point.h */,
+				2F9E04FFEF648961061AE299 /* Range.h */,
+				49015FBE24F188C3EA973ECD /* widget.h */,
+				2B601351BBFD3F9918188CF7 /* window.h */,
+			);
+			name = Headers;
+			sourceTree = "<Group>";
+		};
+		ED1E82605DD74B483AF3C982 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				016B0949A417F07816C9304A /* QtGui.framework */,
+				4CCBAF4988F7A032A2009181 /* QtCore.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<Group>";
+		};
+		EEC299C65D5017EB9DD513B0 /* Sources [UIC] */ = {
+			isa = PBXGroup;
+			children = (
+				0017A40F798267B14DC6F6A4 /* FunctionInputWindow.ui */,
+			);
+			name = "Sources [UIC]";
+			sourceTree = "<Group>";
+		};
+		FB61758D0F0FDA4BA867C3D5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1989362E5E61BBD6E769474F /* CanvasDataGenerator.cpp */,
+				8FF8286F15F3B16FD447847F /* CanvasState.cpp */,
+				BC7723FF7F74713E4AFABBB7 /* CanvasStateData.cpp */,
+				F07AA9C46A96868C2B4D2CB5 /* CanvasText.cpp */,
+				13AB30BC7DEF53A80C90F35A /* FunctionInputWindow.cpp */,
+				98E15315FCE6A7EEB93F9147 /* Line.cpp */,
+				118FCBAABA162BA17933C789 /* main.cpp */,
+				4FF6A20EEB069A289176DFAD /* MainCanvas.cpp */,
+				AEDAD6C0EE0F659248F39403 /* MathFunction.cpp */,
+				70A41B4349C803821012EE1E /* Point.cpp */,
+				61B89A15ED0EBF77FCADD59A /* Range.cpp */,
+				DB7AB3446C8E3EF440F42D80 /* widget.cpp */,
+				22B8EB497DD4812281107EF2 /* window.cpp */,
+			);
+			name = Sources;
+			sourceTree = "<Group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05656470F94F3C434055DFC6 /* 2dpaint */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17B3380A4D6A7D415E7F2E1E /* Build configuration list for PBXNativeTarget "2dpaint" */;
+			buildPhases = (
+				D7BA7D76DAB5DD13389D6332 /* Qt Qmake */,
+				A0A52A2ADF7A1E2A99738674 /* Qt Preprocessors */,
+				C29B8785722055ED95EF7B57 /* Build Sources */,
+				2A1043669E6E5A7426EA502A /* Frameworks & Libraries */,
+				3787F99312C85FF0073FD7BA /* Bundle Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 2dpaint;
+			productName = 2dpaint;
+			productReference = 7651FF811AC1765E003CDB19 /* 2dpaint.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91B15E841AA80083484172DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = CC82A9286117DFED018F418F /* Build configuration list for PBXProject "2dpaint" */;
+			compatibilityVersion = "Xcode 2.4";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 05596AB53D8D521C69802C27 /* 2dpaint */;
+			productRefGroup = 7651FF821AC1765E003CDB19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05656470F94F3C434055DFC6 /* 2dpaint */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3787F99312C85FF0073FD7BA /* Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7651FF951AC19B9C003CDB19 /* constants.h.gch in Bundle Resources */,
+				7651FF9E1AC19B9C003CDB19 /* parser.layout in Bundle Resources */,
+				7651FFA01AC19B9C003CDB19 /* variablelist.h.gch in Bundle Resources */,
+				7651FF9D1AC19B9C003CDB19 /* parser.h.gch in Bundle Resources */,
+				7651FF9C1AC19B9C003CDB19 /* parser.depend in Bundle Resources */,
+				7651FF971AC19B9C003CDB19 /* error.h.gch in Bundle Resources */,
+				7651FF9A1AC19B9C003CDB19 /* parser.cbp in Bundle Resources */,
+				7651FF991AC19B9C003CDB19 /* functions.h.gch in Bundle Resources */,
+			);
+			name = "Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0A52A2ADF7A1E2A99738674 /* Qt Preprocessors */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Preprocessors";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/rohanraja/Documents/OpenSoft/2dpaint -f '2dpaint.xcodeproj/qt_preprocess.mak'";
+		};
+		D7BA7D76DAB5DD13389D6332 /* Qt Qmake */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Qmake";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/rohanraja/Documents/OpenSoft/2dpaint -f '2dpaint.xcodeproj/qt_makeqmake.mak'";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C29B8785722055ED95EF7B57 /* Build Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7651FF9B1AC19B9C003CDB19 /* parser.cpp in Build Sources */,
+				B168B36E7204882519ED70EC /* CanvasDataGenerator.cpp in Build Sources */,
+				F072E0280A6F926F8FDFF08B /* CanvasState.cpp in Build Sources */,
+				7651FF9F1AC19B9C003CDB19 /* variablelist.cpp in Build Sources */,
+				7651FF981AC19B9C003CDB19 /* functions.cpp in Build Sources */,
+				4E7F4BFDA0FA4525F80AC5E6 /* CanvasStateData.cpp in Build Sources */,
+				C306FF839A517BFCF6A3D6E2 /* CanvasText.cpp in Build Sources */,
+				88D182C5FDB6821D590D37D8 /* FunctionInputWindow.cpp in Build Sources */,
+				15E2368BBD24ABD7FD42DDD6 /* Line.cpp in Build Sources */,
+				2B093CA6F071B023A473CED0 /* main.cpp in Build Sources */,
+				2780D8330A79C01E0D1123A2 /* MainCanvas.cpp in Build Sources */,
+				3F367F18B7E41FA2B55F3C7A /* MathFunction.cpp in Build Sources */,
+				4DC2A288150D92700B2067F2 /* Point.cpp in Build Sources */,
+				D608B689453607BD7A6BB690 /* Range.cpp in Build Sources */,
+				02D60937BDA24E3ABB606E42 /* widget.cpp in Build Sources */,
+				FC203E8953C53F09233D0CFC /* window.cpp in Build Sources */,
+				7569EE970450143D72B06EEF /* moc_CanvasState.cpp in Build Sources */,
+				7651FF961AC19B9C003CDB19 /* error.cpp in Build Sources */,
+				D2ACB67A4E2905FEA6F1B257 /* moc_FunctionInputWindow.cpp in Build Sources */,
+				EE433C6E873A077601F75D8F /* moc_widget.cpp in Build Sources */,
+				A8726DBAB1708155C13A0A2A /* moc_window.cpp in Build Sources */,
+			);
+			name = "Build Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4B72B24813252891014BCF61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.6/lib,
+					/usr/local/Cellar/qt/4.8.6/lib,
+					/usr/local/Cellar/qt/4.8.6/lib,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.6/lib/QtCore.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.6/lib/QtCore.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.6/lib/QtGui.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.6/lib/QtGui.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.6/include,
+					.,
+					.,
+					.,
+					/usr/local/include,
+					/System/Library/Frameworks/CarbonCore.framework/Headers,
+					"/usr/local/Cellar/qt/4.8.6/mkspecs/macx-xcode",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.6/lib,
+					/usr/local/Cellar/qt/4.8.6/lib,
+				);
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-L/usr/local/Cellar/qt/4.8.6/lib",
+					"-F/usr/local/Cellar/qt/4.8.6/lib",
+					"-L/usr/local/Cellar/qt/4.8.6/lib",
+					"-F/usr/local/Cellar/qt/4.8.6/lib",
+				);
+				PRODUCT_NAME = 2dpaint;
+			};
+			name = Debug;
+		};
+		8C7174830A1E4DCBA0332EC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = 2dpaint;
+			};
+			name = Release;
+		};
+		BEC09A62E69C3553534FF35E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = 2dpaint;
+			};
+			name = Debug;
+		};
+		D70590BEB531B51029F711BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = x86_64;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.6/lib,
+					/usr/local/Cellar/qt/4.8.6/lib,
+					/usr/local/Cellar/qt/4.8.6/lib,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.6/lib/QtCore.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.6/lib/QtCore.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.6/lib/QtGui.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.6/lib/QtGui.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.6/include,
+					.,
+					.,
+					.,
+					/usr/local/include,
+					/System/Library/Frameworks/CarbonCore.framework/Headers,
+					"/usr/local/Cellar/qt/4.8.6/mkspecs/macx-xcode",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.6/lib,
+					/usr/local/Cellar/qt/4.8.6/lib,
+				);
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-L/usr/local/Cellar/qt/4.8.6/lib",
+					"-F/usr/local/Cellar/qt/4.8.6/lib",
+					"-L/usr/local/Cellar/qt/4.8.6/lib",
+					"-F/usr/local/Cellar/qt/4.8.6/lib",
+				);
+				PRODUCT_NAME = 2dpaint;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17B3380A4D6A7D415E7F2E1E /* Build configuration list for PBXNativeTarget "2dpaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC09A62E69C3553534FF35E /* Debug */,
+				8C7174830A1E4DCBA0332EC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC82A9286117DFED018F418F /* Build configuration list for PBXProject "2dpaint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B72B24813252891014BCF61 /* Debug */,
+				D70590BEB531B51029F711BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91B15E841AA80083484172DE /* Project object */;
+}
