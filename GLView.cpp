@@ -5,6 +5,7 @@
 #include <QtGui/QApplication>
 #include "qglbuilder.h"
 #include "qglcube.h"
+#include <iostream>
 
 void GLView::setSceneData(vector<RCube> pCubes)
 {
@@ -61,12 +62,41 @@ void GLView::paintGL(QGLPainter *painter)
     
     // Drawing the cubes
     
+    QColor color2 = * new QColor(1,1,1);
+    QColor color3 = * new QColor(1,1,1);
+    QGLMaterial *material2 = new QGLMaterial;
+    QGLMaterial *material3 = new QGLMaterial;
+    color2.setRgbF(0, 1, 0);
+    material2->setColor(color2);
+    material2->setShininess(0);
+    color3.setRgbF(1, 0, 0);
+    material3->setColor(color3);
+    material3->setShininess(0);
+    
+    QGLMaterial *materialmain ;
+    
     for(int i=0; i<cubes.size(); i++)
     {
         builder.newNode()->setObjectName(QLatin1String("pixel3d"));
         builder<< cubes[i].cube;
         builder.currentNode()->setPosition(cubes[i].position);
+        
+        
+        qreal r = cubes[i].position.z() / 32;
+        QColor color4 = * new QColor(1,1,1);
+        
+        //std::cout << "\n " << r ;
+        color4.setRgbF(1-r, r, r);
+        
+        QGLMaterial *materialmain = new QGLMaterial;
+        materialmain->setColor(color4);
+        materialmain->setShininess(0);
+        
+        builder.currentNode()->setMaterial(materialmain);
     }
+    
+    
+    
     
     m_rootNode = builder.finalizedSceneNode();
     

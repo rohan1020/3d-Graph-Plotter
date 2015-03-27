@@ -27,6 +27,7 @@ class CanvasDataGenerator
     vector<Point> listOfPoints ;
     MathFunction mathFunc ;
     
+    QColor getColorVal(float zval);
     
 public:
     

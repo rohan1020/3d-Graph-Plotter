@@ -21,10 +21,12 @@ public:
     
     RCube();
     RCube(QGLCube pcube, QVector3D pposition);
+    RCube(QGLCube pcube, QVector3D pposition, QGLMaterial *pmaterial);
     RCube(const RCube &p2);
 
     QGLCube cube ;
     QVector3D position;
+    QGLMaterial *material;
     
 
 };

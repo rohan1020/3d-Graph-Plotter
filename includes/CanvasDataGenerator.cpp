@@ -66,6 +66,25 @@ vector<Line> CanvasDataGenerator::getPlotLines()
     
 }
 
+QColor CanvasDataGenerator::getColorVal(float zval)
+{
+    QColor retColor = * new QColor();
+    
+    qreal r = zval / (30) ;
+    r = r >=0 ? r*5 : -1*r ;
+    r = r>1 ? 1/r : r;
+    qreal g = r / 2;
+    qreal b = r / 4;
+    
+    
+    if(zval<10)
+        retColor.setRgbF(r,g,b);
+    else
+        retColor.setRgbF(0,1,0);
+    
+    return retColor;
+}
+
 vector<RCube> CanvasDataGenerator::getPlotCubes()
 {
     
@@ -76,6 +95,8 @@ vector<RCube> CanvasDataGenerator::getPlotCubes()
     float curX = range.x_min , curY = range.y_min, curZ;
     float stepSize = range.getStepSize();
     
+    
+    
     while (curX <= range.x_max) {
         
         curY = range.y_min ;
@@ -84,7 +105,12 @@ vector<RCube> CanvasDataGenerator::getPlotCubes()
             
             curZ = mathFunc.getYVal(curX, curY);
             
-            cubes.push_back(* new RCube(*new QGLCube(0.1),*new QVector3D(curX,curY,curZ)));
+            QColor color2 = getColorVal(curZ);
+            QGLMaterial *material2 = new QGLMaterial;
+            material2->setColor(color2);
+            material2->setShininess(0);
+            
+            cubes.push_back(* new RCube(*new QGLCube(0.1),*new QVector3D(curX,curY,curZ),material2));
             
             curY = curY + stepSize ;
             
