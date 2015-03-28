@@ -3,6 +3,7 @@
 //#include "../qmlres.h"
 
 #include "GLView.h"
+#include "MeshPainter.h"
 #include "RCube.h"
 #include <vector>;
 
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
     SceneStateData ssd = cdg.getSceneStateData();
     
 
-    GLView view(ssd.cubes);
+    MeshPainter view(ssd.cubes);
     //view.setSceneData(cubes);
     //view.setWindowTitle(QObject::tr("Tetrahedron"));
     //view.resize(300, 300);
