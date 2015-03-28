@@ -25,6 +25,8 @@ public:
     SceneStateData();
     
     SceneStateData(const SceneStateData &p2);
+    
+    SceneStateData operator+(SceneStateData csd);
 };
 
 #endif /* defined(__graph3d__SceneStateData__) */

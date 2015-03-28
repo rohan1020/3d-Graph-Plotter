@@ -19,6 +19,43 @@ GLView::GLView(vector<RCube> pCubes, QWidget *parent)
 {
     
     
+    
+    // Create the cube
+    QGLBuilder builder;
+    
+    builder << QGL::Faceted ; //<< QGLCube(1) ;
+    
+    // Drawing the cubes
+    
+    QColor color2 = * new QColor(1,1,1);
+    QColor color3 = * new QColor(1,1,1);
+    QGLMaterial *material2 = new QGLMaterial;
+    QGLMaterial *material3 = new QGLMaterial;
+    color2.setRgbF(0, 1, 0);
+    material2->setColor(color2);
+    material2->setShininess(0);
+    color3.setRgbF(1, 0, 0);
+    material3->setColor(color3);
+    material3->setShininess(0);
+    
+    QGLMaterial *materialmain ;
+    
+    for(int i=0; i<cubes.size(); i++)
+    {
+        builder.newNode()->setObjectName(QLatin1String("pixel3d"));
+        builder<< cubes[i].cube;
+        builder.currentNode()->setPosition(cubes[i].position);
+        builder.currentNode()->setMaterial(cubes[i].material);
+    }
+
+    
+    m_rootNode = builder.finalizedSceneNode();
+    
+    // Setup the camera
+    camera()->setEye(* new QVector3D(5,5,30));
+    camera()->setFieldOfView(45);
+    camera()->setNearPlane(1);
+    camera()->setFarPlane(500);
 }
  
 GLView::~GLView()
@@ -54,56 +91,6 @@ void GLView::initializeGL(QGLPainter *painter)
 void GLView::paintGL(QGLPainter *painter)
 {
     
-    
-    // Create the cube
-    QGLBuilder builder;
-    
-    builder << QGL::Faceted ; //<< QGLCube(1) ;
-    
-    // Drawing the cubes
-    
-    QColor color2 = * new QColor(1,1,1);
-    QColor color3 = * new QColor(1,1,1);
-    QGLMaterial *material2 = new QGLMaterial;
-    QGLMaterial *material3 = new QGLMaterial;
-    color2.setRgbF(0, 1, 0);
-    material2->setColor(color2);
-    material2->setShininess(0);
-    color3.setRgbF(1, 0, 0);
-    material3->setColor(color3);
-    material3->setShininess(0);
-    
-    QGLMaterial *materialmain ;
-    
-    for(int i=0; i<cubes.size(); i++)
-    {
-        builder.newNode()->setObjectName(QLatin1String("pixel3d"));
-        builder<< cubes[i].cube;
-        builder.currentNode()->setPosition(cubes[i].position);
-        
-        
-        qreal r = cubes[i].position.z() / 32;
-        QColor color4 = * new QColor(1,1,1);
-        
-        //std::cout << "\n " << r ;
-        color4.setRgbF(1-r, r, r);
-        
-        QGLMaterial *materialmain = new QGLMaterial;
-        materialmain->setColor(color4);
-        materialmain->setShininess(0);
-        
-        builder.currentNode()->setMaterial(materialmain);
-    }
-    
-    
-    
-    
-    m_rootNode = builder.finalizedSceneNode();
-    
-    // Setup the camera
-    camera()->setFieldOfView(45);
-    camera()->setNearPlane(1);
-    camera()->setFarPlane(500);
     
     // Perform some transformations
     painter->modelViewMatrix().translate(0.0, 0.0, 0);

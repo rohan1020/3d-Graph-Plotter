@@ -11,6 +11,7 @@
 #include "Line.h"
 #include "CoordinateSystem.h"
 #include "CanvasText.h"
+#include "GridPlaneGenerator.h"
 #include <QtGui>
 
 CanvasDataGenerator::CanvasDataGenerator()
@@ -70,17 +71,13 @@ QColor CanvasDataGenerator::getColorVal(float zval)
 {
     QColor retColor = * new QColor();
     
-    qreal r = zval / (30) ;
-    r = r >=0 ? r*5 : -1*r ;
-    r = r>1 ? 1/r : r;
-    qreal g = r / 2;
-    qreal b = r / 4;
+    qreal r = zval / (32) ;
+   // r = r >=0 ? r*5 : -1*r ;
+   // r = r>1 ? 1/r : r;
     
     
-    if(zval<10)
-        retColor.setRgbF(r,g,b);
-    else
-        retColor.setRgbF(0,1,0);
+    
+    retColor.setRgbF(1-r, r, r);
     
     return retColor;
 }
@@ -89,9 +86,7 @@ vector<RCube> CanvasDataGenerator::getPlotCubes()
 {
     
     vector<RCube> cubes ;
-    
-    vector<Point> points ;
-    
+        
     float curX = range.x_min , curY = range.y_min, curZ;
     float stepSize = range.getStepSize();
     
@@ -136,9 +131,15 @@ vector<RCube> CanvasDataGenerator::getPlotCubes()
 
 SceneStateData CanvasDataGenerator::getSceneStateData()
 {
-    SceneStateData ssdata ;
+    SceneStateData ssdata , gridplanes;
     
     ssdata.cubes = getPlotCubes();
+    
+    GridPlaneGenerator gpg(range) ;
+    
+    gridplanes = gpg.getXYPlane();
+    
+    ssdata = ssdata + gridplanes ;
     
     return ssdata;
 }
