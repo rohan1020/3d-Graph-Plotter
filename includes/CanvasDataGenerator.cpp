@@ -141,7 +141,7 @@ SceneStateData CanvasDataGenerator::getSceneStateData()
     
     gridplanes = gpg.getXYPlane();
     
- //   ssdata = ssdata + gridplanes ;
+    ssdata = ssdata + gridplanes ;
     
     return ssdata;
 }

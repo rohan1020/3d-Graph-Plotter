@@ -12,11 +12,11 @@
 
 Range::Range()
 {
-    x_min = -4 ;
-    x_max = 4 ;
+    x_min = -8 ;
+    x_max = 8 ;
     
-    y_min = -4 ;
-    y_max = 4;
+    y_min = -8 ;
+    y_max = 8;
     
     z_min = -5;
     z_max = 5 ;
