@@ -1,4 +1,4 @@
-
+ 
 #include <QtGui/QApplication>
 //#include "../qmlres.h"
 

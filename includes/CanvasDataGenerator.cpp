@@ -77,7 +77,7 @@ QColor CanvasDataGenerator::getColorVal(float zval)
     
     
     
-    retColor.setRgbF(1-r, r, r);
+    retColor.setRgbF(r, 1-r, 1-r);
     
     return retColor;
 }
@@ -104,8 +104,10 @@ vector<RCube> CanvasDataGenerator::getPlotCubes()
             QGLMaterial *material2 = new QGLMaterial;
             material2->setColor(color2);
             material2->setShininess(0);
+            RCube cube = * new RCube(*new QGLCube(0.1),*new QVector3D(curX,curY,curZ),material2);
+            cube.color = color2;
             
-            cubes.push_back(* new RCube(*new QGLCube(0.1),*new QVector3D(curX,curY,curZ),material2));
+            cubes.push_back(cube);
             
             curY = curY + stepSize ;
             
@@ -139,7 +141,7 @@ SceneStateData CanvasDataGenerator::getSceneStateData()
     
     gridplanes = gpg.getXYPlane();
     
-    ssdata = ssdata + gridplanes ;
+ //   ssdata = ssdata + gridplanes ;
     
     return ssdata;
 }

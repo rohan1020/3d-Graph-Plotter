@@ -28,4 +28,5 @@ RCube::RCube(const RCube &p2)
     position = p2.position;
     cube = p2.cube;
     material = p2.material;
+    color = p2.color;
 }

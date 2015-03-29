@@ -47,5 +47,5 @@ float MathFunction::getYVal(float x, float y)
     if(funcTxt == "0")
         return 0;
     
-    return x*x + y*y; // ToDo - Generalize
+    return x*x + y*y;
 }

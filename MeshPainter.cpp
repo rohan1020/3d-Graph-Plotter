@@ -26,44 +26,21 @@ MeshPainter::MeshPainter(vector<RCube> pCubes, QWidget *parent)
 , m_rootNode(0), cubes(pCubes)
 {
     
-    
-    
-    // Create the cube
     QGLBuilder builder;
     
     builder << QGL::Faceted ; //<< QGLCube(1) ;
     
-    // Drawing the cubes
-    
-    QColor color2 = * new QColor(1,1,1);
-    QColor color3 = * new QColor(1,1,1);
-    QGLMaterial *material2 = new QGLMaterial;
-    QGLMaterial *material3 = new QGLMaterial;
-    color2.setRgbF(0, 1, 0);
-    material2->setColor(color2);
-    material2->setShininess(0);
-    color3.setRgbF(1, 0, 0);
-    material3->setColor(color3);
-    material3->setShininess(0);
-    
-    QGLMaterial *materialmain ;
-    
-    for(int i=0; i<cubes.size(); i++)
-    {
-        builder.newNode()->setObjectName(QLatin1String("pixel3d"));
-        builder<< cubes[i].cube;
-        builder.currentNode()->setPosition(cubes[i].position);
-        builder.currentNode()->setMaterial(cubes[i].material);
-    }
-    
+    builder<< * new QGLCube(0.1);
+    builder.currentNode()->setPosition(*new QVector3D(0,0,0));
     
     m_rootNode = builder.finalizedSceneNode();
     
     // Setup the camera
-    camera()->setEye(* new QVector3D(5,5,30));
+    //camera()->setEye(* new QVector3D(5,5,30));
     camera()->setFieldOfView(45);
     camera()->setNearPlane(1);
     camera()->setFarPlane(500);
+
 }
 
 MeshPainter::~MeshPainter()
@@ -96,16 +73,78 @@ void MeshPainter::initializeGL(QGLPainter *painter)
     painter->setFaceMaterial(QGL::AllFaces, material);
 }
 
+
+
 void MeshPainter::paintGL(QGLPainter *painter)
 {
+    painter->setStandardEffect(QGL::LitMaterial);
     
+    QVector2DArray vertices;
     
-    // Perform some transformations
-    painter->modelViewMatrix().translate(0.0, 0.0, 0);
-    //    painter->modelViewMatrix().rotate(15.0, 1.0, 0.0, 0.0);
-    //    painter->modelViewMatrix().rotate(30.0, 0.0, 1.0, 0.0);
-    //    painter->modelViewMatrix().rotate(15.0, 0.0, 0.0, 1.0);
+    QVector3DArray normals, vertices2;
     
-    // Draw the cube
+    //QVector<QColor> colors;
+   
+    QArray<QColor4ub> colors;
+    //QArray<QColor> colors ;
+    
+    QRect rect(0,0,8,8);
+    
+    int step = qMin(rect.width() / 8, rect.height() / 8);
+    int midx = rect.x() + rect.width() / 2;
+    int midy = rect.y() + rect.height() / 2;
+    
+    vertices.append(midx - step, midy + step);
+    vertices.append(midx + step * 2, midy + step * 2);
+    vertices.append(midx + step * 2, midy);
+    vertices.append(midx + step, midy - step);
+    vertices.append(midx - step, midy - step * 2);
+    
+//    vertices2.append(0,0,0);
+//    vertices2.append(0,1,0);
+//    vertices2.append(2,2,5);
+//    vertices2.append(1,0,0);
+//    vertices2.append(0,0,0);
+    
+    for(int i=0; i<cubes.size(); i++)
+    {
+        vertices2.append(cubes[i].position.x(), cubes[i].position.y(), cubes[i].position.z());
+        normals.append(0, 0, 1);
+        
+        
+        
+        colors.push_back(* new QColor4ub(cubes[i].color));
+        //colors[i].
+        
+    }
+//    
+//    normals.append(0.0f, 0.0f, 1.0f);
+//    normals.append(0.0f, 0.0f, 1.0f);
+//    normals.append(0.0f, 0.0f, 1.0f);
+//    normals.append(0.0f, 0.0f, 1.0f);
+//    normals.append(0.0f, 0.0f, 1.0f);
+//    //normals.append(0.0f, 0.0f, 1.0f);
+    
+    painter->clearAttributes();
+    painter->setVertexAttribute(QGL::Position, vertices2);
+    painter->setVertexAttribute(QGL::Normal, normals);
+    painter->setVertexAttribute(QGL::Color, colors);
+
+    
+    //painter->draw(QGL::TriangleFan, cubes.size());
+    
     m_rootNode->draw(painter);
+    
+    // Overpaint some lines to show the triangle boundaries.
+    painter->clearAttributes();
+    painter->setStandardEffect(QGL::FlatPerVertexColor);
+    //painter->setColor(QColor(202, 170, 0));
+//    static ushort const indices[] = {0, 2, 0, 3};
+    painter->setVertexAttribute(QGL::Position, vertices2);
+    painter->setVertexAttribute(QGL::Color, colors);
+    
+    painter->draw(QGL::Points, cubes.size());
+    
+    painter->modelViewMatrix().translate(0.0, 0.0, 0);
+    
 }

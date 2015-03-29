@@ -27,6 +27,7 @@ public:
     QGLCube cube ;
     QVector3D position;
     QGLMaterial *material;
+    QColor color;
     
 
 };

@@ -21,7 +21,7 @@ Range::Range()
     z_min = -5;
     z_max = 5 ;
     
-    pixelsPerPoint_X = 30; // Pixels - Constant Parameter
+    pixelsPerPoint_X = 2; // Pixels - Constant Parameter
     pixelsPerPoint_Y = 10; // Pixels - Constant Parameter
     
     
